@@ -1,26 +1,25 @@
-# 🚀 AI Portfolio Generator - Backend
+# 🎨 AI Portfolio Generator - Frontend
 
-Backend service for generating AI-powered portfolio websites from resumes.
+Frontend UI for generating and customizing AI-based portfolio websites.
 
 ---
 
 ## 🔥 Features
 
-* PDF resume parsing
-* AI-based data extraction (OpenRouter)
-* JSON validation & cleanup
-* Dynamic HTML generation
-* Vercel auto deployment
+* Resume upload
+* Theme & color selection
+* AI data review & editing
+* Template selection (3 templates)
+* Deploy portfolio to Vercel
+* View live portfolio link
 
 ---
 
 ## 🛠️ Tech Stack
 
-* NestJS
-* Sequelize
-* Supabase (PostgreSQL)
-* OpenRouter (LLM)
-* Vercel API
+* Angular (Standalone Components)
+* TypeScript
+* HTML/CSS
 
 ---
 
@@ -28,38 +27,24 @@ Backend service for generating AI-powered portfolio websites from resumes.
 
 ```bash
 npm install
-npm run start:dev
+ng serve
 ```
 
 ---
 
-## 🔐 Environment Variables
+## 📌 Pages
 
-```env
-OPENROUTER_API_KEY=
-VERCEL_TOKEN=
-SUPABASE_DB_URL=
-```
-
----
-
-## 📌 API Endpoints
-
-### Upload Resume
-
-`POST /resume/upload`
-
-### Deploy Portfolio
-
-`POST /deploy`
+* Upload Resume
+* Review Data
+* Template Selection
 
 ---
 
 ## ⚡ Flow
 
-1. Upload PDF
-2. Extract text
-3. AI parses data
-4. User edits data
-5. Generate HTML
-6. Deploy to Vercel
+1. Upload resume
+2. AI extracts data
+3. User edits missing info
+4. Select template
+5. Deploy portfolio
+6. Get live link

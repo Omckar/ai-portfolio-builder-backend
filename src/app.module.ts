@@ -12,18 +12,18 @@ import { SequelizeModule } from '@nestjs/sequelize';
     ConfigModule.forRoot({
       isGlobal: true,
     }),
-    SequelizeModule.forRootAsync({
-      inject: [ConfigService],
-      useFactory: (config: ConfigService) => ({
-        dialect: 'postgres',
-        uri: config.get<string>('SUPABASE_DB_URL'),
-        autoLoadModels: true,
-        synchronize: true,
-        dialectOptions: {
-          ssl: { require: true, rejectUnauthorized: false },
-        },
-      }),
-    }),
+    // SequelizeModule.forRootAsync({
+    //   inject: [ConfigService],
+    //   useFactory: (config: ConfigService) => ({
+    //     dialect: 'postgres',
+    //     uri: config.get<string>('SUPABASE_DB_URL'),
+    //     autoLoadModels: true,
+    //     synchronize: true,
+    //     dialectOptions: {
+    //       ssl: { require: true, rejectUnauthorized: false },
+    //     },
+    //   }),
+    // }),
     ResumeModule,
     AiModule,
     DeployModule,
