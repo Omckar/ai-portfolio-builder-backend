@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <div id="app"></div>
+
+  <script>
+    const data = __DATA__;
+
+    document.getElementById('app').innerHTML = `
+      <h1>${data.name}</h1>
+      <h2>${data.title}</h2>
+      <ul>
+        ${data.skills.map(s => `<li>${s}</li>`).join('')}
+      </ul>
+    `;
+  </script>
+</body>
+</html>
